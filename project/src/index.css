@@ -1,0 +1,231 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --primary-color: #4a6ee0;
+  --primary-dark: #3a5bc7;
+  --secondary-color: #6c757d;
+  --background-dark: #0f1116;
+  --background-light: #f8f9fa;
+  --text-light: #ffffff;
+  --text-dark: #343a40;
+  --border-color: #343a40;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: white !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+/* Card styles */
+.card {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.post-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.category-item:hover {
+  background-color: #f8f9fa;
+}
+
+.category-count {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+}
+
+/* Form styles */
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Profile page */
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.avatar-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #6c757d;
+  margin-right: 10px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.vote-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.vote-count {
+  margin: 0 10px;
+}
+
+.comment-count {
+  display: flex;
+  align-items: center;
+}
+
+.trending-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.trending-tag {
+  background-color: #e9ecef;
+  color: #495057;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 10px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-avatar {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
